@@ -5,7 +5,7 @@
 struct termios orig_termios;
 
 void disableRawMode() {
-  tcsetatr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
+  tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
 }
 
 void enableRawMode() {
